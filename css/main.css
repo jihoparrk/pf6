@@ -1,0 +1,488 @@
+main{
+}
+section{
+}
+#mainFooter{
+  height: 100%;
+}
+section>.wrap{
+  box-sizing: border-box;
+}
+/* introduction ------------------------------------------- */
+#introduction{
+  padding-top: 240px;
+  transition: all 0.5s;
+  position: relative;
+}
+#introduction .wrap{
+
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+#introduction .wrap::before{
+  content: "";
+  display: block;
+  width: 45%;
+  height: 1600px;
+  margin-left: 40px;
+  background-image: url(https://www.brandxcorp.com/web/upload/images/img_main01.jpg),url(https://www.brandxcorp.com/web/upload/images/img_main02.jpg),url(https://www.brandxcorp.com/web/upload/images/img_main03.jpg),url(https://www.brandxcorp.com/web/upload/images/img_main04.jpg),url(https://www.brandxcorp.com/web/upload/images/img_main05.jpg);
+  background-size: 98%,50%,70%,64%,100%;
+  background-repeat: no-repeat;
+  background-position-y: 0,400px,850px,1010px,1305px;
+  background-position-x: left,right,left,right,center;
+}
+#introduction .right{
+  width: 440px;
+  box-sizing: border-box;
+  padding-right: 65px;
+}
+#introduction .right p{
+  line-height: 2;
+  margin-bottom: 30px;
+}
+#introduction .right a.more{
+  
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  color: #ff581e;
+}
+#introduction .right a.more::before{
+  content: "";
+  display: block;
+  border: transparent;
+  border-right: 1px solid red;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -30%;
+  bottom: 0;
+  rotate: -45deg;
+  transform-origin: 100% 100%;
+  transition:all 0.5s;
+}
+#introduction .right a.more::after{
+  content: "";
+  width: 130%;
+  border-bottom: 1px solid red;
+  display: block;
+  margin-top: 10px;
+  transition:all 0.5s;
+
+}
+#introduction .right a.more:hover::before{
+  right: -50%;
+
+}
+#introduction .right a.more:hover::after{
+  width: 150%;
+
+}
+#introduction hgroup{
+
+}
+#introduction h2{
+
+  color: #ff581e;
+}
+#introduction h3{
+
+  margin: 30px 0;
+  line-height: 1.6;
+}
+#introduction p{
+
+}
+.fixed{
+  position: fixed;
+/*   top: 50px; */
+  right: 0;
+}
+#introduction .right::after{
+  content: "";
+  width: 100%;
+  height: 200px;
+  display: block;
+  margin-top: 20px;
+  background-image: url(https://www.brandxcorp.com/web/upload/images/img_circle01.png),url(https://www.brandxcorp.com/web/upload/images/img_circle02.png),url(https://www.brandxcorp.com/web/upload/images/img_circle03.png);
+  background-size: 35%, 35%,35%;
+  background-position-x: 0, 44%, 88%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+/* news -------------------------------------------------*/
+#news {
+/*   transition: all 0.7s;
+  border: 3px solid #000;   */
+}
+
+#news .wrap {
+  max-width: 900px;
+  display: flex;
+  gap: 40px;
+}
+
+#news .wrap h2 {
+  
+}
+
+#news .wrap article {
+  
+  width: calc(100% / 3);
+  position: relative;
+  padding-bottom: 80px;
+}
+
+#news .wrap article hgroup {
+  
+  position: relative;
+}
+#news .wrap article hgroup::before{
+  content: "";
+  display: block;
+  height: 350px;
+  background-color: #eee;
+}
+#news .wrap article hgroup h3 {
+  
+  /*! transform-origin: 0 100%; */
+  /*! transform: translateX(-25px) translateY(-13px) rotate(90deg); */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+}
+#news .wrap article:nth-of-type(1) hgroup h3{
+  background-image: url(https://www.brandxcorp.com/web/upload/category/editor/2022/04/06/f96d6b5a7cbeb0232ccfcff558dff1e2.jpg);
+}
+#news .wrap article:nth-of-type(2) hgroup h3{
+  background-image: url(https://www.brandxcorp.com/web/upload/images/img_main08.jpg);
+}
+#news .wrap article:nth-of-type(3) hgroup h3{
+  background-image: url(https://www.brandxcorp.com/web/upload/images/img_main06.jpg);
+}
+#news .wrap article hgroup h3::before{
+  content: "";
+  transform-origin: 0 100%;
+  transform: scale(0.9) translateX(-20px) translateY(-17px) rotate(90deg);
+  display: block;
+  position: absolute;
+}
+#news .wrap article:nth-of-type(1) hgroup h3::before{
+    content: " Brand X, News";
+
+}
+#news .wrap article:nth-of-type(2) hgroup h3::before{
+    content: "Brand X, IR";
+
+}
+#news .wrap article:nth-of-type(3) hgroup h3::before{
+    content: "Brand X, Career";
+}
+
+#news .wrap article hgroup h3 a{
+  
+  background-image: url(https://www.brandxcorp.com/web/upload/category/editor/2022/04/06/f96d6b5a7cbeb0232ccfcff558dff1e2.jpg);
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+#news .wrap article hgroup h4 {
+  
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 30px;
+  height: 120px;
+}
+
+#news .wrap article p {
+  
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#news .wrap article a.more {
+  
+  border: 1px solid;
+  height: 40px;
+  display: block;
+  width: 100px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 10px;
+  transition: all 0.5s;
+}
+#news .wrap article a:hover.more{
+  background-color: #000;
+  color: #fff;
+}
+.introPt{
+  position: absolute;
+  right: 0;
+}
+
+
+/* brand ------------------------*/
+#brand {
+  
+}
+
+#brand .wrap {
+  
+  max-width: 100%;
+}
+
+#brand .wrap h2 {
+  
+}
+
+#brand .wrap ul {
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#brand .wrap ul li {
+  
+  width: calc(100% / 2);
+  height: 15.104166666666667vw;
+  overflow: hidden;
+}
+
+#brand .wrap ul li a {
+  
+  display: block;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  padding-left: 20px;
+}
+#brand .wrap ul li a::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+#brand .wrap ul li a:hover::before{
+  background-color: rgba(0,0,0,0.5);
+}
+#brand .wrap ul li:nth-child(1) a{
+  background-image: url(../img/thumb_xexy.jpg);
+}
+#brand .wrap ul li:nth-child(2) a{
+  background-image: url(../img/thumb_whia.jpg);
+}
+#brand .wrap ul li:nth-child(3) a{
+  background-image: url(../img/thumb_gelato.jpg);
+}
+#brand .wrap ul li:nth-child(4) a{
+  background-image: url(../img/thumb_mix.jpg);
+}
+#brand .wrap ul li:nth-child(5) a{
+  background-image: url(../img/thumb_madi.jpg);
+}
+#brand .wrap ul li:nth-child(6) a{
+  background-image: url(../img/thumb_pocket.jpg);
+}
+#brand .wrap ul li:nth-child(7) a{
+  background-image: url(../img/thumb_3care.jpg);
+}
+#brand .wrap ul li:nth-child(8) a{
+  background-image: url(../img/thumb_pt.jpg);
+}
+
+#brand .wrap ul li a h3 {
+  height: 20px;
+  width: 90px;
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  z-index: 3;
+}
+#brand .wrap ul li a h3.white{
+  filter: invert(100%);
+  position: static;
+  margin-bottom: 33px;
+  animation-name: left;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;  
+}
+.invert{
+  filter: invert(100%);
+  
+}
+@keyframes left{
+  0%{
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100%{
+    opacity:1;
+    transform: translateX(0px);
+  }
+}
+#brand .wrap ul li a h3.white::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -15px;
+  width: 38px;
+  border-top: 3px solid #000;
+}  
+/* #brand .wrap ul li:nth-child(8) a h3.white::after{
+  filter: invert(100%);
+} */
+#brand .wrap ul li a:hover h3.white::after{
+  animation-name: h2right;
+  animation-duration: 0.6s;
+  animation-direction: reverse; 
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+ @keyframes h2right{
+  0%{
+    opacity: 1;
+    left: 0px;
+  }
+  100%{
+    opacity:0;
+    left: -30px;
+  }
+}
+#brand .wrap ul li:nth-child(1) a h3{
+  width: 130px;
+}
+#brand .wrap ul li:nth-child(2) a h3{
+  
+  width: 90px;
+}
+#brand .wrap ul li:nth-child(3) a h3{
+  width: 100px;
+}
+#brand .wrap ul li:nth-child(4) a h3{
+  width: 110px;
+}
+#brand .wrap ul li:nth-child(5) a h3{
+  width: 180px;
+}
+#brand .wrap ul li:nth-child(6) a h3{
+ width: 110px; 
+}
+#brand .wrap ul li:nth-child(7) a h3{
+  width: 90px;
+  height: 10px;
+}
+#brand .wrap ul li:nth-child(8) a h3{
+  width: 110px;
+}
+
+#brand .wrap ul li a h3 img{
+  width: 100%;
+  display: block;
+}
+#brand .wrap ul li:nth-child(3) a h3 img{
+  width: 120px;
+  height: 30px;
+}
+#brand .wrap ul li:nth-child(6) a h3 img{
+  width: 120px;
+  height: 33px;
+}
+#brand ul li a p {
+  color: #000;
+  position: relative;
+  font-size: 13px;
+}
+
+#brand ul li a.over p {
+  color: #000;
+  position: relative;
+/*   transform: translateY(-10px); */
+  animation-name: up;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+}
+@keyframes up{
+  0%{
+    opacity: 0;
+    transform-origin: 50% 100%;
+    transform: scale(0.8) translateY(0px);
+  }
+  100%{
+    color: #fff;
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+#brand ul li a {
+  
+}
+
+#brand a.more {
+  border: 1px solid #000;
+  line-height: 40px;
+  display: block;
+  width: 200px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 13px;
+  text-align: center;
+  transition: all 0.5s;
+}
+#brand a:hover.more {
+  background-color: #000;
+  color: #fff;
+}
+/* office */
+#brandoffice{
+  display: flex;
+  justify-content: end;
+}
+#brandoffice .wrap{
+  width: 900px;
+  margin: initial;
+}
+#brandoffice h2{
+  line-height: 3;
+  color: orangered;
+  text-transform: uppercase;
+}
+#brandoffice ul.brandOfficeSlide{
+
+}
+#brandoffice ul.brandOfficeSlide li{
+  transform: translateX(-100px);
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+#brandoffice ul.brandOfficeSlide li img{
+
+}
+.progressive{
+  border-top: 2px solid #ccc;
+  display: block;
+  margin-top: 40px;
+  width: calc(100% - 250px);
+  transition: all 0.5s;
+}

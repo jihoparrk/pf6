@@ -1,0 +1,51 @@
+#subtitle{
+
+}
+
+#subtitle .wrap{
+
+  height: 330px;
+  padding-left: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #eee;
+
+  background-image: url(../img/philosophy.jpg);
+}
+#subtitle.historyT .wrap{
+  background-image: url(../img/history.jpg);
+  background-size: cover;
+  background-position: center;  
+  padding: initial;
+  text-align: center;
+}
+#subtitle hgroup{
+
+  color: #000;
+}
+#subtitle.historyT hgroup{
+  
+  color: #fff;
+}
+#subtitle hgroup h2{
+
+}
+#subtitle hgroup h3{
+
+  line-height: 2.5;
+  font-weight: 500;
+}
+#subtitle p{
+
+  color: #000;
+  text-align: left;
+}
+#subtitle.historyT p{
+  
+  color: #fff;
+  text-align: center;
+}
+
+ 

@@ -1,0 +1,118 @@
+/* 모바일 */
+@media screen and (max-width:768px){
+  /*  common  */
+  .h3{
+  font-size: calc(33px * 0.7) !important;
+  }
+  .h4{
+  font-size: calc(53px * 0.7);
+  }
+  section:nth-child(1) .wrap{
+  padding: initial;
+  }
+  .history{
+  padding: initial !important;
+  text-align: center;
+  }
+  /*  서브타이틀  */
+  #subtitle .wrap{
+  padding-left: initial;
+  height: 42.96875vw;
+  text-align: center;
+  }
+  #subtitle hgroup h3{
+  font-size: calc(50px * 0.7);
+  line-height: calc(2.5 * 0.7);
+  }
+  #subtitle p{
+  font-size: calc(13px * 0.7);
+  text-align: center;
+  }
+  /*  소개  */
+  .wrap{
+  padding: initial;
+  }
+  #philosophy h2{
+  position: static;
+  color: #333;
+  }
+  #philosophy h2::after{
+  background-color: #ccc;
+  }
+  #philosophy h3 + p{
+  margin-bottom: calc(50px * 0.7);
+  }
+  #philosophy ul.contents li h4{
+  line-height: calc(4 * 0.7);
+  }
+  #philosophy ul.contents li h4::before{
+  font-size: calc(70px * 0.7);
+  }
+  #philosophy ul.contents li p{
+  padding-left: calc(40px * 0.6);
+  }
+  #philosophy ul.contents li p:nth-of-type(1){
+  padding-top: calc(40px * 0.7);
+  }
+  /*  ㅎ히힛히스슽스토톨토리  */
+  #history p.history + p{
+  line-height: 1.5;
+  font-size: 16.5px;
+  margin-top: 20px;
+  padding: 0 20px;
+  }
+  #history article{
+  display: block;
+  padding-top: calc(60px * 0.7);
+  padding-bottom: calc(60px * 0.7);
+  }
+  #history h4{
+  text-align: center;
+  margin: initial;
+  margin-bottom: 16px;
+  }
+}
+
+/* 태블릿 */
+@media screen and (max-width:1024px){
+  /*  common  */
+  .h3{
+  font-size: calc(33px * 0.7) !important;
+  }
+  .h4{
+  font-size: calc(53px * 0.7);
+  }
+  section:nth-child(1) .wrap{
+  padding: initial;
+  }
+  .history{
+  padding: initial !important;
+  text-align: center;
+  }
+  /*  서브타이틀  */
+  #subtitle .wrap{
+  padding-left: 50px;
+  height: 42.96875vw;
+  text-align: left;
+  }
+  #subtitle hgroup h3{
+  font-size: calc(50px * 0.7);
+  line-height: calc(2.5 * 0.7);
+  }
+  #subtitle p{
+  font-size: calc(13px * 0.7);
+  }
+  /*  소개  */
+  #philosophy .wrap{
+  padding: initial;
+  }
+  #philosophy h2 + .p{
+  }
+  /* history */
+  #history p.history + p{
+  line-height: 2;
+  font-size: 15px;
+  margin: initial;
+  margin: 30px;
+  }
+}
