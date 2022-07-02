@@ -27,34 +27,79 @@
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <!-- <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <script type="text/javascript" src="js/slick.js"></script>
+
     <!--  브랜드오피스 드래그 시 진행바크기 변화 --->
     <script>
         $(function(){
                 $('.brandOfficeSlide').slick({
                     centerMode: true,
                     centerPadding: '100px',
-                    arrows:false
+                    arrows:false,
+                    dots: true
                 });
                 $("#brandoffice .wrap").append("<span class='progressive'></span>");
 
                 var progressiveW=$("#brandoffice .wrap .progressive").width()/6;
                 $("#brandoffice .wrap .progressive").css("width",progressiveW);
                 console.log("진행바크기 1/6 :" +$("#brandoffice .wrap .progressive").width());
-
-                //드래그해서 이동시 작동
-                //*=은 대입연산자라고 한다. 따라서 progressiveW 변수의 값에 n값을 곱한 후 그 값을 다시 progressiveW 변수에 넣어라.
                 var n;
                 $('.slick-track').on('click mouseleave',function(){
-                    
-                    n=Number($(this).children("li.slick-current").attr("data-slick-index"))+1;
-                    //Numver();은 문자 타입을 숫자 타입으로 전환해줌
+                    n = $("#brandoffice .slick-dots .slick-active").index()+1;
+
                     $("#brandoffice .wrap .progressive").css("width",progressiveW*n);
                 });
-                // });$('.slick-track').on('click mouseleave',function(){
-                    //      console.log("드래그마침");
         });
     </script>
+
+
+    <!-- 프로그래시브의 너비는?
+6 / 슬릭액티브의 순서(index)+1 
+
+도트 액티브 갖고 있다면
+1. 만약 활성화 된 도트라면? 
+2. 애드클래스
+애드클래스에 = 
+프로그레시브 너비=
+100 / 활성화된 li의 번호 -->
+
+    <!-- <script>
+        $(function(){
+            $('.brandOfficeSlide').slick({
+                    centerMode: true,
+                    centerPadding: '100px',
+                    arrows:false,
+                    dots: true
+                });
+                $("#brandoffice .wrap").append("<span class='progressive'></span>");
+                // console.log(cc);
+                // var dotCount = $("#brandoffice .slick-dots li").length;
+                $(function(){
+                    var cc = $("#brandoffice .slick-dots .slick-active").index()+1;
+                    var n1=100/dotCount;
+                    if(dotCount==2){
+                        cc=$("#brandoffice .slick-dots .slick-active").index()+1;
+                        $("#brandoffice .progressive").css("width",n1*cc+"%");
+                    }
+                    if(dotCount==3){
+                        cc=$("#brandoffice .slick-dots .slick-active").index()+1;
+                        $("#brandoffice .progressive").css("width",n1*cc+"%");
+                    }
+                    if(dotCount==4){
+                        cc=$("#brandoffice .slick-dots .slick-active").index()+1;
+                        $("#brandoffice .progressive").css("width",n1*cc+"%");
+                    }
+                    if(dotCount==8){
+                        cc=$("#brandoffice .slick-dots .slick-active").index()+1;
+                        $("#brandoffice .progressive").css("width",n1*cc+"%");
+                    }
+                    if($("#brandoffice ul .slick-dots").has(".slick-active")){
+                        $("#brandoffice .progressive").css("width",n1+"%");
+                    }
+                });
+        });
+    </script> -->
     <!-- 팝업 슬라이드 --->
     <script>
         $(function(){
