@@ -7,12 +7,11 @@
     <title>브랜드엑스코퍼레이션</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
-
     <!-- 구글폰트:notosanskr -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
-    
+    <!-- css -->
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/header.css" type="text/css">
     <link rel="stylesheet" href="css/title.css" type="text/css">
@@ -21,49 +20,44 @@
     <link rel="stylesheet" href="css/popup.css" type="text/css">
     <link rel="stylesheet" href="css/responsive.css" type="text/css">
     <link rel="stylesheet" href="css/aside.css" type="text/css">
-    <!-- <script src="js/jquery-1.6.2.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- js -->
     <script type="text/javascript" src="js/popup.js"></script>
-    
-<!-- slick 브랜드오피스 슬라이드  ---------------------------------------------------------------------------------------->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
 
-    <script type="text/javascript" src="js/slick.js"></script>    
-    
-<!--  브랜드오피스 드래그 시 진행바크기 변화 --------------------------------------------------------------------------------->
+    <!--  브랜드오피스 드래그 시 진행바크기 변화 --->
     <script>
-    $(function(){
-            //office slick
-            $('.brandOfficeSlide').slick({
-                centerMode: true,
-                centerPadding: '100px',
-                arrows:false
+        $(function(){
+                $('.brandOfficeSlide').slick({
+                    centerMode: true,
+                    centerPadding: '100px',
+                    arrows:false
+                });
+                $("#brandoffice .wrap").append("<span class='progressive'></span>");
 
-            });
-            $("#brandoffice .wrap").append("<span class='progressive'></span>");
+                var progressiveW=$("#brandoffice .wrap .progressive").width()/6;
+                $("#brandoffice .wrap .progressive").css("width",progressiveW);
+                console.log("진행바크기 1/6 :" +$("#brandoffice .wrap .progressive").width());
 
-            var progressiveW=$("#brandoffice .wrap .progressive").width()/6;
-            $("#brandoffice .wrap .progressive").css("width",progressiveW);
-            console.log("진행바크기 1/6 :" +$("#brandoffice .wrap .progressive").width())
-
-            //드래그해서 이동시 작동
-            //*=은 대입연산자라고 한다. 따라서 progressiveW 변수의 값에 n값을 곱한 후 그 값을 다시 progressiveW 변수에 넣어라.
-            var n;
-            $('.slick-track').on('click mouseleave',function(){
-                
-                n=Number($(this).children("li.slick-current").attr("data-slick-index"))+1;
-                //Numver();은 문자 타입을 숫자 타입으로 전환해줌
-                $("#brandoffice .wrap .progressive").css("width",progressiveW*n); 
-                
-                
-            });
-            // });$('.slick-track').on('click mouseleave',function(){
-                //      console.log("드래그마침");
-            });
-            </script>
-<!-- 팝업 슬라이드 ---------------------------------------------------------------------------------------------------->
+                //드래그해서 이동시 작동
+                //*=은 대입연산자라고 한다. 따라서 progressiveW 변수의 값에 n값을 곱한 후 그 값을 다시 progressiveW 변수에 넣어라.
+                var n;
+                $('.slick-track').on('click mouseleave',function(){
+                    
+                    n=Number($(this).children("li.slick-current").attr("data-slick-index"))+1;
+                    //Numver();은 문자 타입을 숫자 타입으로 전환해줌
+                    $("#brandoffice .wrap .progressive").css("width",progressiveW*n);
+                });
+                // });$('.slick-track').on('click mouseleave',function(){
+                    //      console.log("드래그마침");
+        });
+    </script>
+    <!-- 팝업 슬라이드 --->
     <script>
         $(function(){
             $(document).ready(function(){
@@ -80,18 +74,17 @@
             });
         });
     </script>
-<!-- 모드 전환 ------------------------------------------------------------------------------------------------------->
+    <!-- 모드 전환 -->
 	<script>
         $(function(){
             $("aside a.mode").click(function(){
                 $(this).toggleClass("dark");
                 $("body").toggleClass("bodyDark");
-                $("").attr("","");
                 return false;
             });
         });
     </script>
-<!-- 문서 로딩 시 ----------------------------------------------------------------------------------------------------->
+    <!-- 문서 로딩 시 -->
     <script>
         $(document).ready(
             function(){
@@ -112,7 +105,7 @@
                     $(this).siblings().removeClass("currentSlide");
                 });
 
-                // 타이틀 영역 위 대메뉴만 배치 gnb 메뉴를 타이틀 영역으로 복제, 이동---------------------------------------------->
+                // 타이틀 영역 위 대메뉴만 배치 gnb 메뉴를 타이틀 영역으로 복제, 이동
                 $("#title .wrap").prepend("<div class='tMenu'></div>"); //append나 prepend는 신규 추가
                 $("header .gnb").clone().appendTo(".tMenu"); //appendTo는 기존에 있는 태그를 추가해주는 기능 
                 $(".tMenu .sub").remove();
@@ -133,7 +126,7 @@
                 $(".tMenu + a").text("contact us");
 
 
-// 소개 부분 스크롤 이벤트 -스크롤 > 고정 > 다시 스크롤---------------------------------------------------------------->
+                // 소개 부분 스크롤 이벤트 -스크롤 > 고정 > 다시 스크롤
                 
                 //console.log($("#introduction .right").offset());
                     var introduction=$("#introduction").offset().top;
@@ -150,25 +143,16 @@
                     console.log("ftogether111: "+fTogether);
                     
                     $(window).scroll(function(){
-                        
                         windowTop=$(window).scrollTop();
                         
-//스크롤 시 팝업창 작아짐----------------------------------------------------------------------------------->
-                    var st = $(window).scrollTop();
-                    if(st>300){
-                        st=0
-                    }else{
-                        st=(300-st) / 300;
-                    }
-                        
-// 다크모드 선택 창 숨기기------------------------------------------------------------------------------------->
-                        // if(windowTop > $("#introduction h2").height()){
-                        //     $("aside").fadeOut();
-                        // }
-                        // if(windowTop == $("footer .together p").height()){
-                        //     $("aside").fadeIn();
-                        // }
-
+                        //스크롤 시 팝업창 작아짐
+                        var st = $(window).scrollTop();
+                        if(st>300){
+                            st=0
+                        }else{
+                            st=(300-st) / 300;
+                        }
+                        // 다크모드 선택 창 숨기기
                         var modeT = $(window).height() - $("aside a.mode").offset().top;
 
                         if(windowTop > modeT && windowTop < fTogether){
@@ -185,8 +169,6 @@
                             $("aside a.mode").stop().fadeTo(300,1);
                             $("aside a.mode").css({"transform":"scale(1)","transform-origin":"100% 50%"});
                         }
-
-//----------------------------------------------------------------------------------------------------->
                         $("#showimage").css({"transform":"scale("+st+")","opacity":st});
 
                         //contact 크기, 색조정 원래대로 & 로고 이동
@@ -217,23 +199,18 @@
                             introductionRight.removeClass("fixed");
                             //contact us 작아지게
                         }
-                        
                     });
-                
+                    //윈도우 리사이즈
+                    $(window).resize(function(){
+                        winH=$(window).height();
+                        //console.log(winH);
+                        //windowTop=$(window).scrollTop();
+                        introduction=$("#introduction").offset().top;
+                        introductionTop=$("#introduction .right").offset().top;
+                        introductionH=$("#introduction").innerHeight(); //패딩값 포함한 높이는 innerHeigh()
+                    });
 
-//윈도우 리사이즈 -------------------------------------------------------------------------------->
-
-                $(window).resize(function(){
-                    winH=$(window).height();
-                    //console.log(winH);
-                    //windowTop=$(window).scrollTop();
-                    introduction=$("#introduction").offset().top;
-                    introductionTop=$("#introduction .right").offset().top;
-                    introductionH=$("#introduction").innerHeight(); //패딩값 포함한 높이는 innerHeigh()
-                });
-
-//브랜드섹션 오버 효과--------------------------------------------------------------------------------->
-
+                //브랜드섹션 호버 효과
                 $("#brand ul li a").hover(
                     function(){
                         $(this).children("p").removeClass("hide");
@@ -251,8 +228,7 @@
                         $(this).children(".white").remove();
                     }
                 );
-
-                //함께해요 우리와
+                // 풋터 함께해요 우리와 부분
                 var transY=0; 
                 var fTogether=$("footer .together").offset().top-$(window).height();
 
@@ -560,42 +536,42 @@
             </div>
         </section>
     </main>
-<!-- 모드 전환 -->
-<aside>
+    <!-- 모드 전환 -->
+    <aside>
     <a class="mode">Mode</a>
-</aside>
-<!-- 하단 영역 -->
-<footer class="padding-t60">
-    <div class="wrap">
-        <h1 class="h1">
-            <a href="">
-                <img src="https://www.brandxcorp.com/web/upload/images/footer_logo_black.png" alt="">
-            </a>
-        </h1>
-        <address>
-            서울시 성동구 뚝섬로1길 63 영창디지털타워 6F, 12F, 16F<span class="block"></span>
-            ㈜브랜드엑스코퍼레이션<br>
-            <span class="engAdress">
-            Opening hours. am 9:30 - pm 6:30<br>
-            Lunch break. pm 12:30 - pm 1:30<br>
-            Sat, Sun Off
-            </span>
-        </address>
-        <ul class="fnb">
-            <li><a href="">회사소개</a></li>
-            <li><a href="">브랜드</a></li>
-            <li><a href="">뉴스</a></li>
-            <li><a href="">공시정보</a></li>
-            <li><a href="">채용</a></li>
-            <li><a href="">개인정보처리방침</a></li>
-        </ul>
-    </div>
-    <div class="together">
-        <h2 class="h2">함께해요, 우리와.</h2>
-        <p class="p">실패를 두려워 하지 않는 도전정신 <span class="block"></span>
-            함께 일하고, 함께 성장하는 브랜드엑스코퍼레이션</p>
-    </div>
-</footer>
+    </aside>
+    <!-- 하단 영역 -->
+    <footer class="padding-t60">
+        <div class="wrap">
+            <h1 class="h1">
+                <a href="">
+                    <img src="https://www.brandxcorp.com/web/upload/images/footer_logo_black.png" alt="">
+                </a>
+            </h1>
+            <address>
+                서울시 성동구 뚝섬로1길 63 영창디지털타워 6F, 12F, 16F<span class="block"></span>
+                ㈜브랜드엑스코퍼레이션<br>
+                <span class="engAdress">
+                Opening hours. am 9:30 - pm 6:30<br>
+                Lunch break. pm 12:30 - pm 1:30<br>
+                Sat, Sun Off
+                </span>
+            </address>
+            <ul class="fnb">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">브랜드</a></li>
+                <li><a href="">뉴스</a></li>
+                <li><a href="">공시정보</a></li>
+                <li><a href="">채용</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+            </ul>
+        </div>
+        <div class="together">
+            <h2 class="h2">함께해요, 우리와.</h2>
+            <p class="p">실패를 두려워 하지 않는 도전정신 <span class="block"></span>
+                함께 일하고, 함께 성장하는 브랜드엑스코퍼레이션</p>
+        </div>
+    </footer>
 </body>
 </html>
 
