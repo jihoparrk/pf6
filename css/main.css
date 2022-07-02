@@ -486,3 +486,6 @@ section>.wrap{
   width: calc(100% - 250px);
   transition: all 0.5s;
 }
+#brandoffice .slick-dots li{
+   opacity: 0;
+}
